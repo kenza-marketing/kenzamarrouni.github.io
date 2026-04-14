@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenza Alami Marrouni: Marketing & Business Management</title>
+<meta name="description" content="Portfolio of Kenza Alami Marrouni: Marketing & Business Management Specialist based in Christchurch, New Zealand.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #F7F5F0;
+    --stone: #E8E4DC;
+    --text: #1A1A18;
+    --muted: #6B6860;
+    --accent: #2D5A3D;
+    --accent-light: #E8EFE9;
+    --line: #D5D1C8;
+    --white: #FFFFFF;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); font-size: 15px; line-height: 1.7; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(247,245,240,0.96);
+    border-bottom: 1px solid var(--line);
+    padding: 0 2.5rem;
+    display: flex; align-items: center; justify-content: space-between; height: 60px;
+  }
+  .nav-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; letter-spacing: 0.06em; color: var(--text); text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
+
+  .hero { min-height: 100vh; display: flex; align-items: center; padding: 100px 2.5rem 4rem; max-width: 1160px; margin: 0 auto; }
+  .hero-inner { display: grid; grid-template-columns: 1fr 340px; gap: 5rem; align-items: center; width: 100%; }
+  .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; }
+  .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--accent); }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 4.4rem); font-weight: 300; line-height: 1.06; letter-spacing: -0.01em; margin-bottom: 0.2rem; }
+  h1 em { font-style: italic; font-weight: 300; }
+  .hero-title { font-size: 0.74rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-weight: 400; margin-bottom: 2rem; margin-top: 0.5rem; }
+  .hero-bio { color: var(--muted); font-size: 0.95rem; line-height: 1.85; margin-bottom: 2.5rem; max-width: 560px; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--accent); color: white; padding: 0.7rem 1.8rem; border: none; font-family: 'DM Sans', sans-serif; font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-outline { background: transparent; color: var(--text); padding: 0.7rem 1.8rem; border: 1px solid var(--line); font-family: 'DM Sans', sans-serif; font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s, color 0.2s; }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  .hero-card { background: var(--white); border: 1px solid var(--line); padding: 2rem; }
+  .avatar { width: 60px; height: 60px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; font-weight: 500; color: var(--accent); letter-spacing: 0.04em; border: 1px solid var(--line); }
+  .card-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 500; margin-bottom: 0.2rem; }
+  .card-role { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.4rem; }
+  .stat-row { border-top: 1px solid var(--line); padding: 0.7rem 0; display: flex; justify-content: space-between; align-items: center; }
+  .stat-label { font-size: 0.7rem; color: var(--muted); }
+  .stat-val { font-size: 0.8rem; font-weight: 500; color: var(--text); }
+  .lang-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; }
+  .lang-tag { background: var(--accent-light); color: var(--accent); font-size: 0.66rem; padding: 0.22rem 0.65rem; letter-spacing: 0.06em; font-weight: 500; }
+
+  section { max-width: 1160px; margin: 0 auto; padding: 5rem 2.5rem; }
+  .divider { border: none; border-top: 1px solid var(--line); max-width: 1160px; margin: 0 auto; }
+  .section-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem; }
+  .section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 2rem; }
+
+  .about-para { font-size: 1.05rem; color: var(--muted); line-height: 1.9; max-width: 720px; }
+
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 2rem; }
+  .value-block { background: var(--white); padding: 2rem; }
+  .value-number { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 0.6rem; }
+  .value-title { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.6rem; color: var(--text); }
+  .value-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.75; }
+
+  .exp-item { display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-top: 1px solid var(--line); }
+  .exp-item:last-child { border-bottom: 1px solid var(--line); }
+  .exp-period { font-size: 0.7rem; color: var(--accent); font-weight: 500; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+  .exp-company { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.2rem; }
+  .exp-location { font-size: 0.7rem; color: var(--muted); opacity: 0.7; }
+  .exp-type { display: inline-block; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--stone); color: var(--muted); padding: 0.18rem 0.6rem; margin-top: 0.6rem; }
+  .exp-role { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 500; margin-bottom: 0.8rem; line-height: 1.2; }
+  .exp-desc { list-style: none; }
+  .exp-desc li { font-size: 0.84rem; color: var(--muted); padding: 0.22rem 0 0.22rem 1rem; position: relative; line-height: 1.75; }
+  .exp-desc li::before { content: ''; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; }
+
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .skill-block { background: var(--white); padding: 1.8rem; }
+  .skill-block-label { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 1rem; }
+  .skill-list { list-style: none; }
+  .skill-list li { font-size: 0.84rem; color: var(--muted); padding: 0.3rem 0; border-bottom: 1px solid var(--stone); display: flex; align-items: center; gap: 0.6rem; }
+  .skill-list li::before { content: ''; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+  .skill-list li:last-child { border-bottom: none; }
+
+  .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .edu-card { background: var(--white); padding: 2rem; }
+  .edu-year { font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 0.6rem; }
+  .edu-degree { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; line-height: 1.3; margin-bottom: 0.4rem; }
+  .edu-uni { font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; }
+
+  .vol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .vol-card { background: var(--white); border: 1px solid var(--line); padding: 1.5rem; }
+  .vol-event { font-weight: 500; font-size: 0.86rem; margin-bottom: 0.3rem; color: var(--text); }
+  .vol-loc { font-size: 0.74rem; color: var(--muted); }
+
+  .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .contact-intro { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 300; line-height: 1.4; margin-bottom: 1.2rem; }
+  .contact-sub { color: var(--muted); font-size: 0.88rem; line-height: 1.85; }
+  .contact-details { display: flex; flex-direction: column; gap: 0.8rem; }
+  .contact-row { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.1rem; background: var(--white); border: 1px solid var(--line); }
+  .contact-icon { width: 30px; height: 30px; background: var(--accent-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-icon svg { width: 13px; height: 13px; stroke: var(--accent); fill: none; stroke-width: 1.5; }
+  .contact-val { font-size: 0.84rem; color: var(--text); }
+  .contact-val a { color: var(--accent); text-decoration: none; }
+
+  .footer-wrap { border-top: 1px solid var(--line); max-width: 1160px; margin: 0 auto; padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; }
+  .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 0.92rem; color: var(--muted); }
+  .footer-copy { font-size: 0.7rem; color: var(--muted); opacity: 0.6; }
+
+  @media (max-width: 780px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.4rem; }
+    .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
+    nav { padding: 0 1.2rem; }
+    .nav-links { gap: 1rem; }
+    section { padding: 3rem 1.2rem; }
+    .hero { padding: 90px 1.2rem 3rem; }
+    .footer-wrap { padding: 1.5rem 1.2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-name">K. Alami Marrouni</a>
+  <div class="nav-links">
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div id="hero" class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Based in Christchurch, New Zealand &middot; Open to opportunities</div>
+      <h1>Kenza<br><em>Alami Marrouni</em></h1>
+      <div class="hero-title">Marketing &amp; Business Management Specialist</div>
+      <p class="hero-bio">I started my career in traditional marketing in Morocco, then spent several years in Dubai working across events, tourism, manufacturing, and tech consulting. Each industry taught me something different: patience, adaptability, and how to genuinely understand a business before trying to grow it. I recently completed my Master's in Business Management at the University of Canterbury, and I am now ready for my next role in New Zealand. I am an adaptable and creative person, genuinely keen for new challenges.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Get in touch</a>
+        <a href="#experience" class="btn-outline">View experience</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="avatar">KAM</div>
+      <div class="card-name">Kenza Alami Marrouni</div>
+      <div class="card-role">Marketing &amp; Business Specialist</div>
+      <div class="stat-row"><span class="stat-label">Location</span><span class="stat-val">Christchurch, New Zealand</span></div>
+      <div class="stat-row"><span class="stat-label">Education</span><span class="stat-val">MBM, Univ. of Canterbury</span></div>
+      <div class="stat-row"><span class="stat-label">Experience</span><span class="stat-val">4+ Years International</span></div>
+      <div class="stat-row"><span class="stat-label">Email</span><span class="stat-val" style="font-size:0.68rem;"><a href="mailto:kenza.alamim@gmail.com" style="color:var(--accent);text-decoration:none;">kenza.alamim@gmail.com</a></span></div>
+      <div class="lang-row">
+        <span class="lang-tag">English</span>
+        <span class="lang-tag">French</span>
+        <span class="lang-tag">Arabic</span>
+        <span class="lang-tag">Spanish</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<section id="values">
+  <div class="section-label">What drives me</div>
+  <h2>My values</h2>
+  <div class="values-grid">
+    <div class="value-block">
+      <div class="value-title">Patience</div>
+      <div class="value-desc">Good work takes time. I've learnt to trust the process and stay steady when things are hard.</div>
+    </div>
+    <div class="value-block">
+      <div class="value-title">Learn</div>
+      <div class="value-desc">Not knowing something is never a reason to stop. I commit to finding a way to understand it.</div>
+    </div>
+    <div class="value-block">
+      <div class="value-title">Achieve</div>
+      <div class="value-desc">I set goals and see them through: for my team, my clients, and myself.</div>
+    </div>
+    <div class="value-block">
+      <div class="value-title">Grow</div>
+      <div class="value-desc">Growth is a standard I hold myself to: professionally and personally.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="experience">
+  <div class="section-label">Career history</div>
+  <h2>Work experience</h2>
+
+  <div class="exp-item">
+    <div>
+      <div class="exp-period">Apr 2020 – Aug 2023</div>
+      <div class="exp-company">Carve Consulting</div>
+      <div class="exp-location">Dubai, UAE</div>
+      <div class="exp-type">Boutique Consultancy</div>
+    </div>
+    <div>
+      <div class="exp-role">ERP Implementation Consultant: Odoo</div>
+      <ul class="exp-desc">
+        <li>Assessed ERP needs through client consultation, business process analysis and on-site observation.</li>
+        <li>Ran diagnostic tests and resolved system issues to enhance operational performance.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div>
+      <div class="exp-period">Feb 2019 – Feb 2020</div>
+      <div class="exp-company">HolidayMe</div>
+      <div class="exp-location">Dubai, UAE</div>
+      <div class="exp-type">Travel &amp; Tourism</div>
+    </div>
+    <div>
+      <div class="exp-role">Marketing &amp; Business Alliances Officer</div>
+      <ul class="exp-desc">
+        <li>Developed and sustained partnerships with international governmental tourism boards, banks and universities.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div>
+      <div class="exp-period">Aug 2018 – Dec 2018</div>
+      <div class="exp-company">Roots Event &amp; Management</div>
+      <div class="exp-location">Dubai, UAE</div>
+      <div class="exp-type">Events</div>
+    </div>
+    <div>
+      <div class="exp-role">Marketing &amp; Event Specialist</div>
+      <ul class="exp-desc">
+        <li>Directed planning and execution of high-profile corporate events, meetings and fundraisers.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div>
+      <div class="exp-period">Dec 2017 – Jul 2018</div>
+      <div class="exp-company">Technical Aluminum Foil</div>
+      <div class="exp-location">Dubai, UAE</div>
+      <div class="exp-type">Manufacturing</div>
+    </div>
+    <div>
+      <div class="exp-role">Marketing &amp; Business Representative</div>
+      <ul class="exp-desc">
+        <li>Built a professional network to generate new business referrals and ongoing opportunities.</li>
+        <li>Researched and analysed business leads and client requests.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div>
+      <div class="exp-period">Sep 2014 – Nov 2017</div>
+      <div class="exp-company">Maroc Culture – HLO</div>
+      <div class="exp-location">Morocco</div>
+      <div class="exp-type">Events</div>
+    </div>
+    <div>
+      <div class="exp-role">Marketing &amp; Event Specialist</div>
+      <ul class="exp-desc">
+        <li>Managed logistics, space management and operations for conferences and gala dinners.</li>
+        <li>Recruited, briefed and supervised hosts, hostesses and catering staff.</li>
+        <li>Key events: Mawazine Festival, WTCF Tourism Forum, Pollutec Exhibition.</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<hr class="divider">
+
+<section id="skills">
+  <div class="section-label">What I bring</div>
+  <h2>Skills &amp; expertise</h2>
+  <div class="skills-grid">
+    <div class="skill-block">
+      <div class="skill-block-label">Marketing</div>
+      <ul class="skill-list">
+        <li>Digital Marketing Strategy</li>
+        <li>Campaign Planning &amp; Execution</li>
+        <li>Brand Development</li>
+        <li>Market Research &amp; Analysis</li>
+        <li>Performance Reporting &amp; KPIs</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <div class="skill-block-label">Business &amp; Management</div>
+      <ul class="skill-list">
+        <li>Stakeholder Engagement</li>
+        <li>Project Management</li>
+        <li>Negotiation &amp; Relationship Building</li>
+        <li>Event Coordination &amp; Promotion</li>
+        <li>ERP Implementation (Odoo)</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <div class="skill-block-label">Technology</div>
+      <ul class="skill-list">
+        <li>ERP &amp; Database Management</li>
+        <li>Microsoft Office Suite</li>
+        <li>SPSS</li>
+        <li>Presentation &amp; Reporting</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <div class="skill-block-label">Languages</div>
+      <ul class="skill-list">
+        <li>English: Fluent</li>
+        <li>French: Fluent</li>
+        <li>Arabic: Fluent</li>
+        <li>Spanish: Basic</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="education">
+  <div class="section-label">Academic background</div>
+  <h2>Education</h2>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-year">2025 &middot; Christchurch, New Zealand</div>
+      <div class="edu-degree">Master of Business Management<br><span style="font-size:0.84rem;color:var(--muted);font-weight:400;">Majoring in Marketing</span></div>
+      <div class="edu-uni">University of Canterbury</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2017 &middot; Cardiff, United Kingdom</div>
+      <div class="edu-degree">Bachelor of Business Management<br><span style="font-size:0.84rem;color:var(--muted);font-weight:400;">Minor in Finance</span></div>
+      <div class="edu-uni">Cardiff Metropolitan University</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2014 &middot; Bordeaux, France</div>
+      <div class="edu-degree">Economics &amp; Commerce<br><span style="font-size:0.84rem;color:var(--muted);font-weight:400;">Preparatory Classes</span></div>
+      <div class="edu-uni">Montesquieu University</div>
+    </div>
+  </div>
+
+  <div style="margin-top:3rem;">
+    <div class="section-label" style="margin-bottom:1.5rem;">Volunteering &amp; key events</div>
+    <div class="vol-grid">
+      <div class="vol-card">
+        <div class="vol-event">Armageddon Expo</div>
+        <div class="vol-loc">Christchurch, New Zealand</div>
+      </div>
+      <div class="vol-card">
+        <div class="vol-event">Arabian Travel Market (ATM)</div>
+        <div class="vol-loc">Dubai, UAE</div>
+      </div>
+      <div class="vol-card">
+        <div class="vol-event">Mawazine Festival</div>
+        <div class="vol-loc">Rabat, Morocco</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="contact">
+  <div class="section-label">Let's connect</div>
+  <div class="contact-inner">
+    <div>
+      <p class="contact-intro">Open to the right opportunity in New Zealand.</p>
+      <p class="contact-sub">If you're looking for someone who brings real-world experience, genuine curiosity, and a drive to keep growing: I'd really appreciate the opportunity to connect.</p>
+    </div>
+    <div class="contact-details">
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 7 9-7"/></svg>
+        </div>
+        <div class="contact-val"><a href="mailto:kenza.alamim@gmail.com">kenza.alamim@gmail.com</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>
+        </div>
+        <div class="contact-val">+64 27 364 6183</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <div class="contact-val"><a href="https://www.linkedin.com/in/kenza-alami-marrouni-726093105/" target="_blank">linkedin.com/in/kenza-alami-marrouni-726093105/</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer-wrap">
+  <span class="footer-name">Kenza Alami Marrouni</span>
+  <span class="footer-copy">&copy; 2025</span>
+</div>
+
+</body>
+</html>
